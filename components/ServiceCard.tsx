@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { LucideProps } from 'lucide-react';
 
 interface ServiceCardProps {
   service: {
-    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    icon: ForwardRefExoticComponent<LucideProps & RefAttributes<SVGSVGElement>>;
     title: string;
     description: string;
     features: string[];
